@@ -214,7 +214,7 @@ If the bot [probot-settings](https://probot.github.io/apps/settings/) is not ins
 
 ## 🕵️ **Extra recommendations**
 
-For the proper maintenance of the CHANGELOG.md, we recommend this [VSCode extension](https://github.com/Josee9988/Changelog-and-Markdown-snippets)
+For the proper maintenance of the CHANGELOG.md, we recommend this [VSCode extension](https://github.com/TuxTechLab/Changelog-and-Markdown-snippets)
 and the read and understanding of the [keep a changelog guide](https://keepachangelog.com/en/1.0.0/).
 Please read and comment about it in this [dev.to post](https://dev.to/josee9988/the-ultimate-github-project-template-1264).
 We also recommend installing all the [used bots](https://github.com/TuxTechLab/TuxTechLab-Template-Repo#-used-github-bots).
@@ -241,15 +241,15 @@ We are currently looking for new donators to help and maintain this project! ❤
 
 By donating, you will help the development of this project, and *you will be featured in this project's README.md*, so everyone can see your kindness and visit your content ⭐.
 
-<a href="https://github.com/sponsors/Josee9988">
-  <img alt="project logo" src="https://img.shields.io/badge/Sponsor-Josee9988/project template-blue?logo=github-sponsors&style=for-the-badge&color=red">
+<a href="https://github.com/sponsors/TuxTechLab">
+  <img alt="project logo" src="https://img.shields.io/badge/Sponsor-TuxTechLab/project template-blue?logo=github-sponsors&style=for-the-badge&color=red">
 </a>
 
 ---
 
 ## 🎉 Was the template helpful? Please help us raise these numbers up
 
-[![GitHub's followers](https://img.shields.io/github/followers/Josee9988.svg?style=social)](https://github.com/Josee9988)
+[![GitHub's followers](https://img.shields.io/github/followers/TuxTechLab.svg?style=social)](https://github.com/TuxTechLab)
 [![GitHub stars](https://img.shields.io/github/stars/TuxTechLab/TuxTechLab-Template-Repo.svg?style=social)](https://github.com/TuxTechLab/TuxTechLab-Template-Repo/stargazers)
 [![GitHub watchers](https://img.shields.io/github/watchers/TuxTechLab/TuxTechLab-Template-Repo.svg?style=social)](https://github.com/TuxTechLab/TuxTechLab-Template-Repo/watchers)
 [![GitHub forks](https://img.shields.io/github/forks/TuxTechLab/TuxTechLab-Template-Repo.svg?style=social)](https://github.com/TuxTechLab/TuxTechLab-Template-Repo/network/members)
@@ -262,6 +262,6 @@ Enjoy! 😃
 > There will be files that will need *manual revision* ⚠️
 
 > [!IMPORTANT]  
-> Special Thanks for @[Jesee9988](https://github.com/Josee9988)'s [**project-template**](https://github.com/Josee9988/project-template).
+> Special Thanks for @[Jesee9988](https://github.com/TuxTechLab)'s [**project-template**](https://github.com/TuxTechLab/project-template).
 
 _Made with a lot of ❤️❤️ by **[@TuxTechLab](https://github.com/TuxTechLab)**_
