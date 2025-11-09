@@ -60,7 +60,11 @@ for more information or guidance, follow the [GitHub guide](https://docs.github.
 
     Additionally, watch *[this video](https://asciinema.org/a/425259)* to see **how to execute the script** or use *`bash SETUP_TEMPLATE.sh --help`* to obtain some extra information.
 
-    If the automatic detection of the username, project name or email is NOT correct, please post an issue, and you can **manually correct** them using the optional arguments like: *`bash SETUP_TEMPLATE.sh --username=whatever --projectName=whatever --email=whatever --projectType=whatever`*
+    If the automatic detection of the username, project name or email is NOT correct, please post an issue, and you can **manually correct** them using the optional arguments like: 
+    
+    ```bash 
+    SETUP_TEMPLATE.sh --username=whatever --projectName=whatever --email=whatever --projectType=whatever
+    ```
 
 5. **Review** every single file and **customize** it as you like.
 6. Build your project. 🚀
@@ -79,24 +83,48 @@ The `SETUP_TEMPLATE.sh` script comes with several options to customize its behav
 ```
 
 ### Available Options
+
+#### User Information
 | Flag | Description |
 |------|-------------|
-| `-u, --username, --name` | Manually specify the GitHub username |
+| `-u, --username, --user, --name` | Manually specify the GitHub username |
 | `-e, --email, --mail` | Manually specify the GitHub email |
-| `-t, --projectType, --type` | Specify the type of project (e.g., npm package, website, etc.) |
-| `-h, --help, --info` | Display help text |
-| `-v, --version` | Display script version |
-| `--omit-verification` | Skip verification prompts |
-| `--omit-commit` | Skip automatic commit of changes |
-| `--omit-tests` | Skip script tests |
+| `-p, --project, --project-name, --projectName` | Manually specify the project name |
+| `-t, --type, --project-type, --projectType` | Specify the type of project (e.g., website, api, cli, etc.) |
+
+#### Script Behavior
+| Flag | Description |
+|------|-------------|
+| `--omit-verification` | Skip all verification prompts (auto-accepts all confirmations) |
+| `--omit-commit` | Skip automatic commit of changes (all modifications will remain uncommitted) |
+| `--omit-tests, --omit-test-check` | Skip running tests after setup |
+| `-o, --omit` | (Deprecated) Equivalent to `--omit-verification --omit-commit` |
+
+#### Information
+| Flag | Description |
+|------|-------------|
+| `-h, --help, --info, --information` | Display help text and exit |
+| `-v, --version` | Display script version and exit |
 
 ### Usage Examples
 ```bash
 # Basic usage with automatic detection
 ./SETUP_TEMPLATE.sh
 
-# Specify custom details
-./SETUP_TEMPLATE.sh --username=yourusername --email=your@email.com --type=website
+# Specify custom details (long options with =)
+./SETUP_TEMPLATE.sh --username=yourusername --email=your@email.com --project=myproject --type=website
+
+# Long options with space
+./SETUP_TEMPLATE.sh --username yourusername --email your@email.com --project myproject --type website
+
+# Short options with =
+./SETUP_TEMPLATE.sh -u=yourusername -e=your@email.com -p=myproject -t=website
+
+# Short options with space
+./SETUP_TEMPLATE.sh -u yourusername -e your@email.com -p myproject -t website
+
+# Mixed formats
+./SETUP_TEMPLATE.sh -u yourusername --email=your@email.com -p=myproject --type website
 
 # Skip verification and commit
 ./SETUP_TEMPLATE.sh --omit-verification --omit-commit
@@ -106,8 +134,11 @@ The `SETUP_TEMPLATE.sh` script comes with several options to customize its behav
 ```
 
 ### Notes
-- All arguments except flags require a value after an equal sign (e.g., `--email=example@domain.com`)
+- All arguments support these formats:
+  - `--option=value` or `--option value` for long options
+  - `-o=value` or `-o value` for short options
 - The script automatically detects your Git username, email, and project name
+- Use `--omit-commit` if you want to review changes before committing
 - For more details, run `./SETUP_TEMPLATE.sh --help`
 
 ---
@@ -141,36 +172,36 @@ The script will customize all the data with yours in all the files.
 
 ---
 
-### 🌲 **Project tree**
+### 🌲 **Project Tree**
 
 Files that will get removed after the execution of `SETUP_TEMPLATE.sh` are not shown! 🙈
 
 ```text
 .
-├── CHANGELOG.md
-├── .github
-│   ├── CODE_OF_CONDUCT.md
-│   ├── CODEOWNERS
-│   ├── config.yml
-│   ├── CONTRIBUTING.md
-│   ├── FUNDING.yml
-│   ├── issue_label_bot.yaml
-│   ├── ISSUE_TEMPLATE
-│   │   ├── 1-bug-report.md
-│   │   ├── 2-failing-test.md
-│   │   ├── 3-docs-bug.md
-│   │   ├── 4-feature-request.md
-│   │   ├── 5-enhancement-request.md
-│   │   ├── 6-security-report.md
-│   │   ├── 7-question-support.md
-│   │   └── config.yml
-│   ├── ISSUE_TEMPLATE.md
-│   ├── pull_request_template.md
-│   ├── SECURITY.md
-│   ├── settings.yml
-│   └── SUPPORT.md
-├── .gitignore
-└── README.md
+├── CHANGELOG.md               # Tracks all notable changes to the project, following Keep a Changelog format
+├── .github/                   # GitHub specific configuration files
+│   ├── CODE_OF_CONDUCT.md     # Community guidelines and code of conduct
+│   ├── CODEOWNERS             # Defines individuals/teams responsible for code in the repo
+│   ├── config.yml             # Configuration for GitHub bots and integrations
+│   ├── CONTRIBUTING.md        # Guidelines for contributing to the project
+│   ├── FUNDING.yml            # Configuration for GitHub Sponsors and funding platforms
+│   ├── issue_label_bot.yaml   # Configuration for issue label management bot
+│   ├── ISSUE_TEMPLATE/        # Templates for different types of GitHub issues
+│   │   ├── 1-bug-report.md          # Template for reporting bugs
+│   │   ├── 2-failing-test.md        # Template for reporting test failures
+│   │   ├── 3-docs-bug.md            # Template for documentation issues
+│   │   ├── 4-feature-request.md     # Template for requesting new features
+│   │   ├── 5-enhancement-request.md # Template for suggesting improvements
+│   │   ├── 6-security-report.md     # Template for reporting security vulnerabilities
+│   │   ├── 7-question-support.md    # Template for support questions
+│   │   └── config.yml               # Configuration for issue templates
+│   ├── ISSUE_TEMPLATE.md      # Default issue template (fallback)
+│   ├── pull_request_template.md # Template for pull requests
+│   ├── SECURITY.md            # Security policy and reporting guidelines
+│   ├── settings.yml           # Configuration for settings GitHub bot
+│   └── SUPPORT.md             # Support guidelines and resources
+├── .gitignore                 # Specifies files and directories to ignore in the repository
+└── README.md                  # Project documentation and information
 
 2 directories, 22 files
 ```
