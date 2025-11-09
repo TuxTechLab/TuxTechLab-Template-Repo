@@ -69,6 +69,49 @@ for more information or guidance, follow the [GitHub guide](https://docs.github.
 
 ---
 
+## 🛠️ **Script Usage**
+
+The `SETUP_TEMPLATE.sh` script comes with several options to customize its behavior:
+
+### Basic Usage
+```bash
+./SETUP_TEMPLATE.sh
+```
+
+### Available Options
+| Flag | Description |
+|------|-------------|
+| `-u, --username, --name` | Manually specify the GitHub username |
+| `-e, --email, --mail` | Manually specify the GitHub email |
+| `-t, --projectType, --type` | Specify the type of project (e.g., npm package, website, etc.) |
+| `-h, --help, --info` | Display help text |
+| `-v, --version` | Display script version |
+| `--omit-verification` | Skip verification prompts |
+| `--omit-commit` | Skip automatic commit of changes |
+| `--omit-tests` | Skip script tests |
+
+### Usage Examples
+```bash
+# Basic usage with automatic detection
+./SETUP_TEMPLATE.sh
+
+# Specify custom details
+./SETUP_TEMPLATE.sh --username=yourusername --email=your@email.com --type=website
+
+# Skip verification and commit
+./SETUP_TEMPLATE.sh --omit-verification --omit-commit
+
+# Get help
+./SETUP_TEMPLATE.sh --help
+```
+
+### Notes
+- All arguments except flags require a value after an equal sign (e.g., `--email=example@domain.com`)
+- The script automatically detects your Git username, email, and project name
+- For more details, run `./SETUP_TEMPLATE.sh --help`
+
+---
+
 ## 📚 **What does it include?**
 
 1. A **`SETUP_TEMPLATE.sh`** script that **MUST be executed right when you clone your repository**.
